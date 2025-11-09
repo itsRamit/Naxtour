@@ -1,0 +1,23 @@
+{
+  "name": "naxtour",
+  "version": "1.0.0",
+  "description": "",
+  "homepage": "https://github.com/itsRamit/Naxtour#readme",
+  "bugs": {
+    "url": "https://github.com/itsRamit/Naxtour/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/itsRamit/Naxtour.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "sass sass/main.scss css/style.css -w"
+  },
+  "devDependencies": {
+    "sass": "^1.93.3"
+  }
+}

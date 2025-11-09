@@ -1,0 +1,29 @@
+@import 'base/base';
+@import 'base/animation';
+@import 'base/typography';
+@import 'base/utilities';
+
+@import 'abstracts/functions';
+@import 'abstracts/variable';
+@import 'abstracts/mixins';
+
+@import 'pages/home';
+
+@import 'components/button';
+
+@import 'layouts/header';
+
+
+.header-content{
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+
+
+
+
+

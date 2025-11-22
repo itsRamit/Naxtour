@@ -1,3 +1,5 @@
+@import '../abstracts/mixins';
+
 .story{
     width: 75%;
     margin: 0 auto;
@@ -10,15 +12,34 @@
 
     transform: skewX(-12deg);
 
+    @include respond(tab-port){
+        width: 100%;
+        padding: 4rem;
+        padding-left: 7rem;
+    }
+    @include respond(phone){
+        transform: skewX(0);
+    }
+
     &__shape{
         width: 15rem;
         height: 15rem;
         background-color: orangered;
         float: left;
-        shape-outside: circle(50% at 50% 50%);
-        clip-path: circle(50% at 50% 50%);
         transform: translateX(-3rem) skewX(12deg);
         position: relative;
+        overflow: hidden;
+        border-radius: 50%;
+        
+        @supports (clip-path: circle(50% at 50% 50%)){
+            clip-path: circle(50% at 50% 50%);
+            shape-outside: circle(50% at 50% 50%);
+            border-radius: none;
+        }
+
+        @include respond(phone){    
+            transform: translateX(-3rem) skewX(0);
+        }
     }
     &__img{
         height: 100%;
@@ -27,6 +48,10 @@
     }
     &__text{
         transform: skewX(12deg);
+
+        @include respond(phone){
+            transform: skewX(0);
+        }
     }
 
     &__caption{
